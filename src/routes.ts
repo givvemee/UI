@@ -1,3 +1,4 @@
+import Accordions from "./components/1_accordian";
 import React from "./components/test2/react";
 import Vanilla from "./components/test2/vanilla";
 
@@ -25,7 +26,32 @@ export const routes: Record<ROUTE_PATH, ROUTE> = {
     key: "/",
     link: "/",
     name: "root",
-    children: ["/test1", "/test2"],
+    children: [
+      "/accordion",
+      //   "/tabMenu",
+      //   "/tooltip",
+      //   "/textBox",
+      //   "/lineClamp",
+      //   "/lazyLoading",
+      //   "/infiniteScroll",
+      //   "/scrollBox",
+      //   "/scrollSpy",
+      //   "/snackbar",
+      //   "/modal",
+      //   "/popover",
+      //   "/imageSlide",
+      //   "/carousel",
+      //   "/gallery",
+      //   "/selectBox",
+      //   "/autoComplete",
+      //   "/dnd",
+    ],
+  },
+  "/accordion": {
+    key: "/accordion",
+    link: "/accordion",
+    name: "01. 아코디언",
+    children: Accordions,
   },
   "/test1": {
     key: "/test1",

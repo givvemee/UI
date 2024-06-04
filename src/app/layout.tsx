@@ -17,7 +17,7 @@ export default function RootLayout({
     <html lang="ko">
       <body>
         <Gnb />
-        {children}
+        <main>{children}</main>
       </body>
     </html>
   );
