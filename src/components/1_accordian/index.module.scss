@@ -53,17 +53,17 @@
 
   .item3 {
     overflow: hidden;
-
     .description {
       padding: 0 15px;
-      border-bottom-width: 0;
+      border-bottom: 0;
       max-height: 0;
       transition: ease 0.3s;
     }
     &.current .description {
       padding: 15px;
-      border-bottom-width: 1px;
-      max-height: 300px;
+      border-bottom: 1px;
+      // description 의 높이가 다르기 떄문에 부자연스러운 스크롤
+      max-height: 100vh;
     }
   }
 
@@ -78,7 +78,7 @@
     }
     .description {
       padding: 0 15px;
-      border-bottom-width: 0;
+      border-bottom: 0;
       max-height: 0;
       transition: ease 0.3s;
     }
@@ -92,33 +92,10 @@
       }
       ~ .description {
         padding: 15px;
-        border-bottom-width: 1px;
-        max-height: 300px;
+        border-bottom: 1px;
+
+        max-height: 100vh;
       }
     }
-  }
-
-  details[open] summary {
-    background-color: #ace;
-    padding: 15px;
-    border-bottom-width: 0;
-  }
-
-  details[open] .description {
-    padding: 15px;
-    border-bottom-width: 0;
-  }
-
-  summary {
-    padding: 15px;
-    border-bottom: 1px solid #ccc;
-    cursor: pointer;
-  }
-
-  summary::marker {
-    content: "+ ";
-  }
-  details[open] summary::marker {
-    content: "- ";
   }
 }

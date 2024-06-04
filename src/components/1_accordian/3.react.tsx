@@ -1,4 +1,4 @@
-// accordion with react
+// accordion with react + css transition
 
 import { useState } from "react";
 import cx from "./cx";
@@ -20,16 +20,16 @@ const AccordionItem = ({
   toggle,
 }: DataType) => {
   return (
-    <li className={cx("item", { current })} key={id}>
+    <li className={cx("item", "item3", { current })} key={id}>
       <div className={cx("tab")} onClick={toggle}>
         {title}
       </div>
-      {current ? <div className={cx("description")}>{description}</div> : null}
+      <div className={cx("description")}>{description}</div>
     </li>
   );
 };
 
-const Accordion1 = () => {
+const Accordion3 = () => {
   const [currentId, setCurrentId] = useState<string | null>(data[0].id);
 
   const toggleItem = (id: string) => () => {
@@ -38,7 +38,7 @@ const Accordion1 = () => {
   };
   return (
     <>
-      <h3>#1. React 현재 desc 로만 그리기</h3>
+      <h3>#3. React : css transition 활용</h3>
       <ul className={cx("container")}>
         {data.map((d) => (
           <AccordionItem
@@ -54,4 +54,4 @@ const Accordion1 = () => {
   );
 };
 
-export default Accordion1;
+export default Accordion3;
