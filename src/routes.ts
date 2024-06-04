@@ -1,4 +1,5 @@
 import Accordions from "./components/1_accordian";
+import TabMenus from "./components/2_tabMenu";
 import React from "./components/test2/react";
 import Vanilla from "./components/test2/vanilla";
 
@@ -28,7 +29,7 @@ export const routes: Record<ROUTE_PATH, ROUTE> = {
     name: "root",
     children: [
       "/accordion",
-      //   "/tabMenu",
+      "/tabMenu",
       //   "/tooltip",
       //   "/textBox",
       //   "/lineClamp",
@@ -52,6 +53,12 @@ export const routes: Record<ROUTE_PATH, ROUTE> = {
     link: "/accordion",
     name: "01. 아코디언",
     children: Accordions,
+  },
+  "/tabMenu": {
+    key: "/tabMenu",
+    link: "/tabMenu",
+    name: "02. 탭 메뉴",
+    children: TabMenus,
   },
   "/test1": {
     key: "/test1",

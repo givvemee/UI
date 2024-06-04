@@ -53,7 +53,7 @@ const initiator = (wrapper: HTMLDivElement) => {
 
   const $items = data.map(itemBuilder);
   $ul.append(...$items);
-  wrapper.append($ul);
+  wrapper.append($ul); // 56, 57 순서 바꿔도 무방. 열려있게 한 뒤 렌더를 하고, 렌더하고 열려있게 하는 것의 차이
   ($items[0].children[0] as HTMLElement).click();
 };
 
