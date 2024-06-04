@@ -1,3 +1,6 @@
+import React from "./components/test2/react";
+import Vanilla from "./components/test2/vanilla";
+
 // depth 가 깊어질 수 있음을 고려
 const routePaths = ["/", "/test1", "/test2", "/test2/vanilla", "/test2/react"];
 export type ROUTE_PATH = (typeof routePaths)[number];
@@ -40,13 +43,13 @@ export const routes: Record<ROUTE_PATH, ROUTE> = {
     key: "/test2/vanilla",
     link: "/test2/vanilla",
     name: "vanilla",
-    children: null,
+    children: Vanilla,
   },
   "/test2/react": {
     key: "/test2/react",
     link: "/test2/react",
     name: "react",
-    children: null,
+    children: React,
   },
 };
 
